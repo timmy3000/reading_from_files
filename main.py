@@ -4,17 +4,13 @@
 # --> {"cake":2, "big":1, "is":2, "the":1, "a":1, "it":1}
 
 
-import re
-
 def read_file_content(filename):
     # [assignment] Add your code here 
 
-    try:
-        file = open(filename, 'rt')
+    text = ""
+    
+    with open(filename, 'rt') as file:
         text = file.read()
-        file.close()
-    except Exception:
-        return Exception
     
     return text
 
